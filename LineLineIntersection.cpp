@@ -1,14 +1,14 @@
-bool Line::lineline(Line& lineA) {
+bool Line::lineline(Line& lineA, Line& LineB) {
 
 	float x1 = lineA.start.x;
 	float y1 = lineA.start.y;
 	float x2 = lineA.end.x;
 	float y2 = lineA.end.y;
 	
-	float x3 = this->start.x;
-	float y3 = this->start.y;
-	float y4 = this->end.y;
-	float x4 = this->end.x;
+	float x3 = LineB.start.x;
+	float y3 = LineB.start.y;
+	float y4 = LineB.end.y;
+	float x4 = LineB.end.x;
 
 	float determinant = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4);
 
